@@ -20,16 +20,16 @@
 
 @font-face {
     font-family: 'Museo500-Regular';
-    src: url('font/Museo500-Regular-webfont.woff2') format('woff2'),
-    url('font/Museo500-Regular-webfont.woff') format('woff');
+    src: url('../assets/font/Museo500-Regular-webfont.woff2') format('woff2'),
+    url('../assets/font/Museo500-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Museo300-Regular';
-    src: url('font/Museo300-Regular-webfont.woff2') format('woff2'),
-    url('font/Museo300-Regular-webfont.woff') format('woff');
+    src: url('../assets/font/Museo300-Regular-webfont.woff2') format('woff2'),
+    url('../assets/font/Museo300-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -40,6 +40,7 @@
 
 h1 {
     font-family: 'Museo500-Regular', sans-serif;
+    font-weight: bold;
 }
 
 h1.big-title {
