@@ -1,20 +1,18 @@
-
-
-
 /**********COLOURS*************/
 
 .orange {
-    color: #f5774f;}
+    color: #f5774f;
+}
 
-.turquoise{
+.turquoise {
     color: #00a99d;
 }
 
-.purple{
-       color: #5f7dbf;
+.purple {
+    color: #5f7dbf;
 }
 
-.yellow{
+.yellow {
     color: #ffbb2a;
 }
 
@@ -36,62 +34,65 @@
     font-style: normal;
 }
 
-.center{
+.center {
     text-align: center;
 }
 
 h1 {
-    font-family: 'Museo500-Regular', sans-serif;}
+    font-family: 'Museo500-Regular', sans-serif;
+}
 
 h1.big-title {
     font-family: 'Museo500-Regular', sans-serif;
-   font-size: 5em;}
+    font-size: 5em;
+}
 
-h2{
+h2 {
     font-family: 'Museo300-Regular', sans-serif;
     font-weight: 300;
 }
 
-h4{
+h4 {
     font-family: 'Museo300-Regular', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-.button-text{
+.button-text {
     font-family: 'Museo500-Regular', sans-serif;
     margin-top: 3em;
     font-size: 2em;
 }
 
-p{
-font-family: 'Museo300-Regular', sans-serif;
+p {
+    font-family: 'Museo300-Regular', sans-serif;
     font-weight: 300;
     line-height: 1.4em;
     font-size: .9em;
-    color: #363636;}
+    color: #363636;
+}
 
 
 /**********NAVIGATION**********/
 
-nav{
-     width: 100%;
+nav {
+    width: 100%;
     margin: 1.9em 0;
 }
 
-nav ul{
-     display: block;
+nav ul {
+    display: block;
     text-align: center;
-    
+
 }
 
-nav ul li{
+nav ul li {
     display: inline;
-    margin:  0.9em;
+    margin: 0.9em;
     font-family: 'Museo500-Regular', sans-serif;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: #484848;
 }
@@ -99,12 +100,12 @@ nav ul li a{
 
 /**********FOOTER**********/
 
-.footer{
-    background-color:#383838;
+.footer {
+    background-color: #383838;
     padding: 3em;
 }
 
-.footer p{
+.footer p {
     color: white;
     text-align: right;
     margin-bottom: 0;
