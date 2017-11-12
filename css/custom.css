@@ -16,6 +16,25 @@
     color: #ffbb2a;
 }
 
+.orangebg {
+    background-color: #f5774f;
+}
+
+.turquoisebg {
+    background-color: #00a99d;
+}
+
+.purplebg {
+    background-color: #5f7dbf;
+}
+
+.yellowbg {
+    background-color: #ffbb2a;
+}
+.greybg{
+    background-color: #ebebeb;
+}
+
 /**********TYPOGRAPHY**********/
 
 @font-face {
@@ -38,6 +57,7 @@
     text-align: center;
 }
 
+/*(Faux-Bold)*/
 h1 {
     font-family: 'Museo500-Regular', sans-serif;
     font-weight: bold;
@@ -98,6 +118,23 @@ nav ul li a {
     color: #484848;
 }
 
+/******** SHAPES ********/
+
+.shapeholder{
+    position: relative;
+    float: left;
+    width: 100%;
+    z-index: -1;
+}
+.shape{
+    position: absolute;
+}
+
+#square1{
+    width: 30vw;
+    height: 30vw;
+    left: 100%;
+}
 
 /**********FOOTER**********/
 
