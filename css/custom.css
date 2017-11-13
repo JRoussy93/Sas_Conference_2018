@@ -31,7 +31,8 @@
 .yellowbg {
     background-color: #ffbb2a;
 }
-.greybg{
+
+.greybg {
     background-color: #ebebeb;
 }
 
@@ -58,6 +59,7 @@
 }
 
 /*(Faux-Bold)*/
+
 h1 {
     font-family: 'Museo500-Regular', sans-serif;
     font-weight: bold;
@@ -94,8 +96,10 @@ p {
 }
 
 /**********BODY*****/
-body{
+
+body {
     background-color: #f2f2f2;
+    overflow-x: hidden;
 }
 
 /**********NAVIGATION**********/
@@ -124,20 +128,63 @@ nav ul li a {
 
 /******** SHAPES ********/
 
-.shapeholder{
+.shapeholder {
     position: relative;
     float: left;
     width: 100%;
     z-index: -1;
 }
-.shape{
+
+.shape {
     position: absolute;
 }
 
-#square1{
-    width: 30vw;
-    height: 30vw;
+.rotate-right{
+    -webkit-animation: rotateRight 240s linear infinite;
+    -o-animation: rotateRight 240s linear infinite;
+    animation: rotateRight 240s linear infinite;
+}
+
+#square1 {
+    width: 40vmax;
+    height: 40vmax;
     left: 100%;
+}
+
+#square1holder{
+    left: 20%;
+/*    transition: all 1s ease;*/
+}
+#square1holder.animate{
+    left: 0%;
+}
+@keyframes rotateRight {
+    from {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotateLeft {
+    from {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    to {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
 }
 
 /**********FOOTER**********/
