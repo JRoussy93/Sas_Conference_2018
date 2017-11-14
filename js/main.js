@@ -18,6 +18,29 @@ var shapes = [getID('square1holder')];
 var initialpos
 
 
+/**
+ * Generate initial array with elements as objects
+ * This array will be extended later with elements attributes values
+ * like 'position'
+ */
+function createArrayWithElements() {
+    var elements = document.getElementsByClassName('animate');
+    let finalElements = [];
+
+  [].forEach.call(elements, function (el, i) {
+        finalElements.push({
+            node: el,
+            visible: false
+        });
+    });
+
+    return finalElements;
+};
+
+var objects = createArrayWithElements();
+
+
+
 
 /*----------------------Optimisations-------------------------*/
 
@@ -53,35 +76,11 @@ var transformProp = window.transformProp || (function () {
 
 /*------Main functions-------------*/
 
-
-//Gets element's rotation angle. (source: CSS Tricks)
-//Keeping this to potentially pause and restart the shapes' rotating animation.
-function getAngle(el) {
-    var st = window.getComputedStyle(el, null);
-    var tr = st.getPropertyValue("-webkit-transform") ||
-        st.getPropertyValue("-moz-transform") ||
-        st.getPropertyValue("-ms-transform") ||
-        st.getPropertyValue("-o-transform") ||
-        st.getPropertyValue("transform") ||
-        "FAIL";
-
-
-    // rotation matrix - http://en.wikipedia.org/wiki/Rotation_matrix
-
-    var values = tr.split('(')[1].split(')')[0].split(',');
-    var a = values[0];
-    var b = values[1];
-    var c = values[2];
-    var d = values[3];
-
-    var scale = Math.sqrt(a * a + b * b);
-
-
-    // arc sin, convert from radians to degrees, round
-    var sin = b / scale;
-    var angle = Math.round(Math.atan2(b, a) * (180 / Math.PI) * 100) / 100; //Added the (*100)/100 to keep some decimals 
-
-    return angle;
+//Adds the .out class to all elements to be animated.
+function initializeAnim() {
+    for (var i = 0; i < objects.length; i++) {
+        objects[i].node.classList.add("out");
+    }
 }
 
 //Sets the latestKnownScrollY variable to the latest scroll position, then calls for animation
@@ -106,20 +105,29 @@ function update() {
 
     //var currentScrollY = latestKnownScrollY;
     var windowHeight = window.innerHeight;
-    
+
     //selects shapes one by one and does stuff to them or not
-    for(var i=0; i<shapes.length; i++){
-        var shape = shapes[i];
-        var rect = shape.getBoundingClientRect(); // gets the element's position in the window
+    for (var i = 0; i < objects.length; i++) {
+        var object = objects[i].node;
+        var rect = object.getBoundingClientRect(); // gets the element's position in the window
         var top = rect.top; //gets element's distance from top of window
         
-        if(top <= windowHeight && top >= windowHeight / 3){
-            shape.style.left = top - windowHeight/3 + 'px';
+        if (top <= windowHeight * 2 / 3 && top > 0) {
+            object.classList.remove('out');
+            objects[i].visible = true;
+        } else if (objects[i].visible && top > windowHeight *3/4){
+            object.classList.add('out');
+            objects[i].visible = false;
         }
     }
-    
+
 }
 
+
+initializeAnim();
+
+//Makes sure that all elements become visible
+update();
 
 //Listens for any scrolling on the screen, then calls the onScroll function.
 window.addEventListener('scroll', onScroll, false);
