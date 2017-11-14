@@ -18,22 +18,37 @@
 
 .orangebg {
     background-color: #f5774f;
+    fill: #f5774f;
 }
 
 .turquoisebg {
     background-color: #00a99d;
+    fill: #00a99d;
 }
 
 .purplebg {
     background-color: #5f7dbf;
+    fill: #5f7dbf;
 }
 
 .yellowbg {
-    background-color: #ffbb2a;
+    background-color: #ffd05a;
+    fill: #ffd05a;
+}
+
+.redbg {
+    background-color: #ff5662;
+    fill: #ff5662;
 }
 
 .greybg {
     background-color: #ebebeb;
+    fill: #ebebeb;
+}
+
+.blackbg {
+    background-color: #363636;
+    fill: #363636;
 }
 
 /**********TYPOGRAPHY**********/
@@ -45,6 +60,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'Museo700-Regular';
     src: url('../assets/font/Museo700-Regular-webfont.woff2') format('woff2'),
@@ -62,6 +78,7 @@
 }
 
 /*REMOVE THIS ONE*/
+
 @font-face {
     font-family: 'Museo300-Regular';
     src: url('../assets/font/Museo300-Regular-webfont.woff2') format('woff2'),
@@ -149,25 +166,79 @@ nav ul li a {
     position: absolute;
 }
 
-.rotate-right{
+.rotate-right {
     -webkit-animation: rotateRight 240s linear infinite;
     -o-animation: rotateRight 240s linear infinite;
     animation: rotateRight 240s linear infinite;
 }
 
+.rotate-left {
+    -webkit-animation: rotateLeft 240s linear infinite;
+    -o-animation: rotateLeft 240s linear infinite;
+    animation: rotateLeft 240s linear infinite;
+}
+
+.triangle {
+    -webkit-transform-origin: 50% 66.66%;
+    -moz-transform-origin: 50% 66.66%;
+    -ms-transform-origin: 50% 66.66%;
+    -o-transform-origin: 50% 66.66%;
+    transform-origin: 50% 66.66%;
+}
+
+.square {
+    width: 40em;
+    height: 40em;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 35em;
+    height: 35em;
+}
+
+#triangle1 {
+    right: 100%;
+    width: 20em;
+    top: -7em;
+}
+
 #square1 {
-    width: 40vmax;
-    height: 40vmax;
     left: 100%;
 }
 
-#square1holder{
+/*
+#square1holder {
     left: 20%;
-/*    transition: all 1s ease;*/
+    transition: all 1s ease;
 }
-#square1holder.animate{
+
+#square1holder.animate {
     left: 0%;
 }
+*/
+
+#circle1 {
+    right: 60%;
+    top: -6em;
+}
+
+#square2 {
+    left: 80%;
+}
+
+#square3 {
+    right: 85%;
+    top: 12em;
+    width: 30em;
+    height: 30em;
+}
+
+#circle2 {
+    left: 70%;
+    top: -5em;
+}
+
 @keyframes rotateRight {
     from {
         -webkit-transform: rotate(0deg);
@@ -182,6 +253,7 @@ nav ul li a {
         transform: rotate(360deg);
     }
 }
+
 @keyframes rotateLeft {
     from {
         -webkit-transform: rotate(360deg);
