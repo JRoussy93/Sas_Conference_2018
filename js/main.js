@@ -112,10 +112,10 @@ function update() {
         var rect = object.getBoundingClientRect(); // gets the element's position in the window
         var top = rect.top; //gets element's distance from top of window
         
-        if (top <= windowHeight * 2 / 3 && top > 0) {
+        if (top <= windowHeight * 3/4 && top > 0) {
             object.classList.remove('out');
             objects[i].visible = true;
-        } else if (objects[i].visible && top > windowHeight *3/4){
+        } else if (objects[i].visible && top > windowHeight * 3/4){
             object.classList.add('out');
             objects[i].visible = false;
         }
