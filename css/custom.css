@@ -120,6 +120,14 @@ p {
     font-size: 1.1em;
 }
 
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffbb2a;
+}
+
 /**********BODY*****/
 
 body {
@@ -270,7 +278,7 @@ nav ul li a {
 
 /******* ANIMATION ******/
 .animate{
-    transition: all .4s ease-out;
+    transition: all .4s ease-in-out;
     -webkit-transform: translateX(0em);
     -ms-transform: translateX(0em);
     -o-transform: translateX(0em);
@@ -278,11 +286,24 @@ nav ul li a {
     opacity: 1;
 }
 .out{
+    opacity: 0;
+}
+.from_right.out{
     -webkit-transform: translateX(3em);
     -ms-transform: translateX(3em);
     -o-transform: translateX(3em);
     transform: translateX(3em);
     opacity: 0;
+}
+.from_left.out{
+    -webkit-transform: translateX(-3em);
+    -ms-transform: translateX(-3em);
+    -o-transform: translateX(-3em);
+    transform: translateX(-3em);
+    opacity: 0;
+}
+.shape.out{
+    right: 100% !important;
 }
 
 
