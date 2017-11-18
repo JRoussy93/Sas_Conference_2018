@@ -3,19 +3,16 @@
 /*------- VARIABLES --------*/
 
 //Get Element by ID shortcut
-var getID = function (id) {
-    return document.getElementById(id);
-};
+//var getID = function (id) {
+//    return document.getElementById(id);
+//};
 
 // window scroll position
-var latestKnownScrollY = 0;
+//var latestKnownScrollY = 0;
 
 //Is the animation already updating?
 var ticking = false;
 
-//Array containing all the shape IDs
-var shapes = [getID('square1holder')];
-var initialpos
 
 
 /**
@@ -58,18 +55,18 @@ var loop = window.requestAnimationFrame ||
 
 /* ----TAKEN FROM RELLAX, adds vendor prefixes)*/
 // check which transform property to use 
-var transformProp = window.transformProp || (function () {
-    var testEl = document.createElement('div');
-    if (testEl.style.transform == null) {
-        var vendors = ['Webkit', 'Moz', 'ms'];
-        for (var vendor in vendors) {
-            if (testEl.style[vendors[vendor] + 'Transform'] !== undefined) {
-                return vendors[vendor] + 'Transform';
-            }
-        }
-    }
-    return 'transform';
-})();
+//var transformProp = window.transformProp || (function () {
+//    var testEl = document.createElement('div');
+//    if (testEl.style.transform == null) {
+//        var vendors = ['Webkit', 'Moz', 'ms'];
+//        for (var vendor in vendors) {
+//            if (testEl.style[vendors[vendor] + 'Transform'] !== undefined) {
+//                return vendors[vendor] + 'Transform';
+//            }
+//        }
+//    }
+//    return 'transform';
+//})();
 
 
 
@@ -85,7 +82,7 @@ function initializeAnim() {
 
 //Sets the latestKnownScrollY variable to the latest scroll position, then calls for animation
 function onScroll() {
-    latestKnownScrollY = window.pageYOffset; // using pageYOffset because scrollY is not supported by IE
+    //latestKnownScrollY = window.pageYOffset; // using pageYOffset because scrollY is not supported by IE
     requestTick();
 }
 
@@ -106,7 +103,7 @@ function update() {
     //var currentScrollY = latestKnownScrollY;
     var windowHeight = window.innerHeight;
 
-    //selects shapes one by one and does stuff to them or not
+    //selects elements one by one and does stuff to them or not
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i].node;
         var rect = object.getBoundingClientRect(); // gets the element's position in the window

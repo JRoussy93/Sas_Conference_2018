@@ -170,6 +170,46 @@ nav ul li a {
     color: #484848;
 }
 
+/********* SPLASH PAGE *********/
+#splash{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+#splash_circle{
+    top: -10vmax;
+    left: -10vmax;
+    width: 50vmax;
+    height: 50vmax;
+    z-index: -1;
+}
+
+#splash_triangle{
+    width: 65vmax;
+    bottom: 10vmax;
+    right: -20vmax;
+    transform-origin: center center;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    z-index: -1;
+}
+
+.splash_text{
+    font-size: 13vmax;
+    display: inline-block;
+    margin: auto;
+}
+#then, #next{
+    color: #fff;
+}
+#now{
+    color: #5f7dbf;
+}
+
 /******** SHAPES ********/
 
 .shapeholder {
