@@ -69,10 +69,14 @@ var transformProp = window.transformProp || (function () {
 })();
 
 
-//Easing function
+//Easing functions
 // t: current time, b: begInnIng value, c: change In value, d: duration
 function easeInQuad(t, b, c, d) {
     return c * (t /= d) * t + b;
+}
+
+function easeOutQuad(t, b, c, d) {
+		return -c *(t/=d)*(t-2) + b;
 }
 
 
@@ -111,9 +115,9 @@ function update() {
     //Animates splash shapes
     if (getID('splash')) { //if the page has a splash screen
         if (currentScrollY <= windowHeight) {
-            getID('splash_circle').style[transformProp] = 'translate(-' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeInQuad(currentScrollY, 0, 50, windowHeight) +'%)';
+            getID('splash_circle').style[transformProp] = 'translate(-' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeOutQuad(currentScrollY, 0, 30, windowHeight) +'%)';
             
-            getID('splash_triangle').style[transformProp] = 'translate(' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeInQuad(currentScrollY, 0, 70, windowHeight) +'%) rotate('+ easeInQuad(currentScrollY, 10, 50, windowHeight) +'deg)'
+            getID('splash_triangle').style[transformProp] = 'translate(' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeOutQuad(currentScrollY, 0, 50, windowHeight) +'%) rotate('+ easeInQuad(currentScrollY, 10, 50, windowHeight) +'deg)'
         }
     }
 
