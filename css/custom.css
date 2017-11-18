@@ -126,7 +126,7 @@ p {
 
 a{
     text-decoration: none;
-    transition: color .4s ease !important;
+    transition: all .7s ease-in-out, color .4s ease !important;
 }
 
 a.animate{
