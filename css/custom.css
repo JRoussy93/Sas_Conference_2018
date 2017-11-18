@@ -171,6 +171,9 @@ nav ul li a {
 
 .shape {
     position: absolute;
+    
+    /*  Fixes jagged edges in firefox  */
+    box-shadow: 0 0 1px transparent;
 }
 
 .rotate-right {
