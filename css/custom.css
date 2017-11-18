@@ -110,13 +110,11 @@ h4 {
 
 .button-text {
     font-family: 'Museo500-Regular', sans-serif;
-    margin-top: 3em;
     font-size: 2em;
 }
-
+/* Removed the margins for these, they were not doing anything as it's an inline element*/
 .button-text-inner {
     font-family: 'Museo500-Regular', sans-serif;
-    margin-top: 1em;
     font-size: 1.4em;
 }
 
