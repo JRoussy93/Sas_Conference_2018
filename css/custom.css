@@ -124,6 +124,11 @@ a{
     text-decoration: none;
 }
 
+a.animate{
+    /*  Allows transform to be applied to links  */
+    display: inline-block;
+}
+
 a:hover{
     color: #ffbb2a;
 }
@@ -296,19 +301,16 @@ nav ul li a {
     -ms-transform: translateX(3em);
     -o-transform: translateX(3em);
     transform: translateX(3em);
-    opacity: 0;
 }
 .from_left.out{
     -webkit-transform: translateX(-3em);
     -ms-transform: translateX(-3em);
     -o-transform: translateX(-3em);
     transform: translateX(-3em);
-    opacity: 0;
 }
 .shape.out{
     right: 100% !important;
 }
-
 
 /**********FOOTER**********/
 
