@@ -128,6 +128,7 @@ p {
 
 a{
     text-decoration: none;
+    transition: color .4s ease !important;
 }
 
 a.animate{
@@ -312,7 +313,7 @@ nav ul li a {
 
 /******* ANIMATION ******/
 .animate{
-    transition: all .9s ease-in-out;
+    transition: all .7s ease-in-out;
     -webkit-transform: translateX(0em);
     -ms-transform: translateX(0em);
     -o-transform: translateX(0em);
