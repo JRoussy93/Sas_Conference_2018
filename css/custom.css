@@ -114,6 +114,12 @@ h4 {
     font-size: 2em;
 }
 
+.button-text-inner {
+    font-family: 'Museo500-Regular', sans-serif;
+    margin-top: 1em;
+    font-size: 1.4em;
+}
+
 p {
     font-family: 'MuseoSans', sans-serif;
     line-height: 1.4em;
@@ -201,6 +207,12 @@ nav ul li a {
     transform-origin: 50% 66.66%;
 }
 
+#triangle2 {
+    left: 84%;
+    width: 30em;
+    top: 6em;
+}
+
 .square {
     width: 40em;
     height: 40em;
@@ -249,9 +261,23 @@ nav ul li a {
     height: 30em;
 }
 
+#square4 {
+    right: 76%;
+    top: -10em;
+    width: 50em;
+    height: 50em;
+}
+
 #circle2 {
     left: 70%;
     top: -5em;
+}
+
+#circle3 {
+    left: 70%;
+    top: -13em;
+    width: 30em;
+    height: 30em;
 }
 
 @keyframes rotateRight {
@@ -286,7 +312,7 @@ nav ul li a {
 
 /******* ANIMATION ******/
 .animate{
-    transition: all .4s ease-in-out;
+    transition: all .9s ease-in-out;
     -webkit-transform: translateX(0em);
     -ms-transform: translateX(0em);
     -o-transform: translateX(0em);
