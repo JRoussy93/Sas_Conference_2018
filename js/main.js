@@ -13,7 +13,7 @@ var latestKnownScrollY = 0;
 //Is the animation already updating?
 var ticking = false;
 
-
+var fixed_menu = false;
 
 /**
  * Generate initial array with elements as objects
@@ -76,7 +76,7 @@ function easeInQuad(t, b, c, d) {
 }
 
 function easeOutQuad(t, b, c, d) {
-		return -c *(t/=d)*(t-2) + b;
+    return -c * (t /= d) * (t - 2) + b;
 }
 
 
@@ -112,12 +112,24 @@ function update() {
     var currentScrollY = latestKnownScrollY;
     var windowHeight = window.innerHeight;
 
+    //Fixed menu to top
+    if (!fixed_menu) {
+
+        if (currentScrollY >= windowHeight * 0.9) {
+            getID('main_menu').classList.add('fixed');
+            fixed_menu = true;
+        }
+    } else if (currentScrollY <= windowHeight * 0.9) {
+        getID('main_menu').classList.remove('fixed');
+        fixed_menu = false;
+    }
+
     //Animates splash shapes
     if (getID('splash')) { //if the page has a splash screen
         if (currentScrollY <= windowHeight) {
-            getID('splash_circle').style[transformProp] = 'translate(-' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeOutQuad(currentScrollY, 0, 30, windowHeight) +'%)';
-            
-            getID('splash_triangle').style[transformProp] = 'translate(' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, '+ easeOutQuad(currentScrollY, 0, 50, windowHeight) +'%) rotate('+ easeInQuad(currentScrollY, 10, 50, windowHeight) +'deg)'
+            getID('splash_circle').style[transformProp] = 'translate(-' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, ' + easeOutQuad(currentScrollY, 0, 30, windowHeight) + '%)';
+
+            getID('splash_triangle').style[transformProp] = 'translate(' + easeInQuad(currentScrollY, 0, 100, windowHeight) + '%, ' + easeOutQuad(currentScrollY, 0, 50, windowHeight) + '%) rotate(' + easeInQuad(currentScrollY, 10, 50, windowHeight) + 'deg)'
         }
     }
 
