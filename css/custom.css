@@ -1,4 +1,5 @@
 /**********COLOURS*************/
+
 .orange {
     color: #f5774f;
 }
@@ -116,7 +117,9 @@ h4 {
     font-family: 'Museo500-Regular', sans-serif;
     font-size: 2em;
 }
+
 /* Removed the margins for these, they were not doing anything as it's an inline element*/
+
 .button-text-inner {
     font-family: 'Museo500-Regular', sans-serif;
     font-size: 1.4em;
@@ -128,17 +131,17 @@ p {
     font-size: 1.1em;
 }
 
-a{
+a {
     text-decoration: none;
     transition: all .7s ease-in-out, color .4s ease !important;
 }
 
-a.animate{
+a.animate {
     /*  Allows transform to be applied to links  */
     display: inline-block;
 }
 
-a:hover{
+a:hover {
     color: #ffbb2a;
 }
 
@@ -174,22 +177,38 @@ nav ul li a {
     color: #484848;
 }
 
+#main_menu{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+#main_menu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    z-index: 10;
+}
+
 /********* SPLASH PAGE *********/
-#splash{
+
+#splash {
     height: 90vh;
     width: 100%;
     position: relative;
     display: flex;
 }
 
-#splash_circle{
+#splash_circle {
     top: -10vmax;
     left: -10vmax;
     width: 50vmax;
     height: 50vmax;
 }
 
-#splash_triangle{
+#splash_triangle {
     width: 65vmax;
     bottom: 10vmax;
     right: -20vmax;
@@ -199,20 +218,25 @@ nav ul li a {
     -o-transform: rotate(-10deg);
     transform: rotate(-10deg);
 }
-#splash_triangle, #splash_circle{
+
+#splash_triangle,
+#splash_circle {
     z-index: -1;
     transition: all 0.05s linear;
 }
 
-.splash_text{
+.splash_text {
     font-size: 10vmax;
     display: inline-block;
     margin: auto;
 }
-#then, #next{
+
+#then,
+#next {
     color: #fff;
 }
-#now{
+
+#now {
     color: #5f7dbf;
 }
 
@@ -227,7 +251,7 @@ nav ul li a {
 
 .shape {
     position: absolute;
-    
+
     /*  Fixes jagged edges in firefox  */
     box-shadow: 0 0 1px transparent;
 }
@@ -362,7 +386,8 @@ nav ul li a {
 }
 
 /******* ANIMATION ******/
-.animate{
+
+.animate {
     transition: all .7s ease-in-out;
     -webkit-transform: translateX(0em);
     -ms-transform: translateX(0em);
@@ -370,22 +395,26 @@ nav ul li a {
     transform: translateX(0em);
     opacity: 1;
 }
-.out{
+
+.out {
     opacity: 0;
 }
-.from_right.out{
+
+.from_right.out {
     -webkit-transform: translateX(3em);
     -ms-transform: translateX(3em);
     -o-transform: translateX(3em);
     transform: translateX(3em);
 }
-.from_left.out{
+
+.from_left.out {
     -webkit-transform: translateX(-3em);
     -ms-transform: translateX(-3em);
     -o-transform: translateX(-3em);
     transform: translateX(-3em);
 }
-.shape.out{
+
+.shape.out {
     right: 100% !important;
 }
 
@@ -405,65 +434,69 @@ nav ul li a {
 
 /********SCHEDULE******/
 
-
-
-ul.main { 
-  list-style: none;
-  max-width: 75%;
-  margin: 20px auto;
+ul.main {
+    list-style: none;
+    max-width: 75%;
+    margin: 20px auto;
 }
-h3 {padding: 0; margin: 0;}
 
-      
-li{  list-style: none;  }
-      
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+
+li {
+    list-style: none;
+}
+
 .date {
-  width: 17%;
-  padding: 15% 1% 0 0 ;
-  float: left;
+    width: 17%;
+    padding: 15% 1% 0 0;
+    float: left;
 }
 
 .date h3 {
-  font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .date p {
-  font-size: .8em;
+    font-size: .8em;
 }
 
 .events {
-  float: left;
-  width: 80%;
-  border-left: 1px solid #ccc;
-  margin-top: 10%;
-  padding-top: 3%;
+    float: left;
+    width: 80%;
+    border-left: 1px solid #ccc;
+    margin-top: 10%;
+    padding-top: 3%;
 }
 
 .events-detail {
-  max-width: 550px;
+    max-width: 550px;
 }
 
-.events-detail li{
-  padding: 10px;
-  border-bottom: 1px dashed #ccc;
-  line-height: 22px;
-  transition: ease .4s all;
+.events-detail li {
+    padding: 10px;
+    border-bottom: 1px dashed #ccc;
+    line-height: 22px;
+    transition: ease .4s all;
 }
 
 .events-detail li:hover {
-  background: #e9e9e9;
+    background: #e9e9e9;
 }
 
 .event-time {
-  font-weight: 900;
+    font-weight: 900;
 }
 
 .events-detail li a {
-  text-decoration: none;
-  color: #444;
-  width: 100%;
-  height: 100%;
-  display: block;
+    text-decoration: none;
+    color: #444;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .event-location {
@@ -476,22 +509,22 @@ li{  list-style: none;  }
 
 @media all and (max-width: 641px) {
     .date {
-      width: 100%;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 10px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
     }
-  
-  .events {
-    border:none;
-    width: 100%;
-    margin-top: 0;
-  }
-  
-  .events-detail {
-    padding: 0;
-  }
-  
-  li.date p {
-    margin:0;
-  }
+
+    .events {
+        border: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .events-detail {
+        padding: 0;
+    }
+
+    li.date p {
+        margin: 0;
+    }
 }
