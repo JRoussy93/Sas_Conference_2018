@@ -258,6 +258,12 @@ nav ul li a {
     top: 6em;
 }
 
+#triangle3 {
+    left: 92%;
+    width: 25em;
+    top: -16em;
+}
+
 .square {
     width: 40em;
     height: 40em;
