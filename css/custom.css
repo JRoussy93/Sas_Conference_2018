@@ -194,6 +194,7 @@ nav ul li a {
     width: 100%;
     text-align: center;
     display: block;
+    transition: ease .3s;
 }
 
 #main_menu.fixed {
@@ -202,6 +203,12 @@ nav ul li a {
     left: 0;
     background-color: #f2f2f2;
     z-index: 10;
+    background-color: #607bbf;
+    transition: ease .9s;	
+}
+
+#main_menu.fixed nav ul li a {
+    color: #ffffff;
 }
 
 /********* SPLASH PAGE *********/
@@ -353,7 +360,8 @@ nav ul li a {
     top: -10em;
     width: 50em;
     height: 50em;
-}
+    background-image: url(../images/topography.png);
+    background-size: contain;}
 
 #circle2 {
     left: 70%;
