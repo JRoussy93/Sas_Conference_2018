@@ -211,6 +211,15 @@ nav ul li a {
     color: #ffffff;
 }
 
+/********* SVG METRO MAP *******/
+
+.metro-map{
+   position: absolute;
+    width: 72%;
+    top: -17em;
+    left: -12em;
+}
+
 /********* SPLASH PAGE *********/
 
 #splash {
@@ -353,7 +362,8 @@ nav ul li a {
     top: 12em;
     width: 30em;
     height: 30em;
-}
+    background-image: url(../images/topography.png);
+    background-size: contain;}
 
 #square4 {
     right: 76%;
