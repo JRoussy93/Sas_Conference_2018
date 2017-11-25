@@ -124,10 +124,11 @@ function update() {
 
     var currentScrollY = latestKnownScrollY;
     var windowHeight = window.innerHeight;
-
+    
+    
     //Fixed menu to top
     if (!fixed_menu) {
-
+        
         if (currentScrollY >= menuOrigin) {
             getID('main_menu').classList.add('fixed');
             fixed_menu = true;
@@ -152,10 +153,10 @@ function update() {
         var rect = object.getBoundingClientRect(); // gets the element's position in the window
         var top = rect.top; //gets element's distance from top of window
 
-        if (top <= windowHeight * 3 / 4 && top > 0) {
+        if (top <= windowHeight * 0.9 && top > 0) {
             object.classList.remove('out');
             objects[i].visible = true;
-        } else if (objects[i].visible && top > windowHeight * 3 / 4) {
+        } else if (objects[i].visible && top > windowHeight * 0.9) {
             object.classList.add('out');
             objects[i].visible = false;
         }
