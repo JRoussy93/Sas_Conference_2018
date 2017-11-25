@@ -74,7 +74,7 @@ var transformProp = window.transformProp || (function () {
 function getPosition(element) {
     var yPosition = 0;
 
-    while(element) {
+    while (element) {
         yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
         element = element.offsetParent;
     }
@@ -164,6 +164,9 @@ function update() {
 }
 
 
+/*----------Let's start things up!-------------*/
+
+//Add the .out class to all elements to be animated
 initializeAnim();
 
 //Makes sure that all elements become visible

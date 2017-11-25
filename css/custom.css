@@ -178,13 +178,13 @@ nav ul {
 
 }
 
-nav ul li {
+nav li {
     display: inline;
     margin: 0.9em;
     font-family: 'Museo500-Regular', sans-serif;
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
     color: #484848;
 }
@@ -194,7 +194,7 @@ nav ul li a {
     width: 100%;
     text-align: center;
     display: block;
-    transition: ease .3s;
+    transition: all .3s ease-out;
 }
 
 #main_menu.fixed {
@@ -204,10 +204,12 @@ nav ul li a {
     background-color: #f2f2f2;
     z-index: 10;
     background-color: #607bbf;
-    transition: ease .9s;	
+    transition: all .7s ease-out;
+
+    
 }
 
-#main_menu.fixed nav ul li a {
+#main_menu.fixed a {
     color: #ffffff;
 }
 
