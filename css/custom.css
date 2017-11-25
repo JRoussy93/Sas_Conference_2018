@@ -93,16 +93,6 @@
     font-style: normal;
 }
 
-/*REMOVE THIS ONE*/
-
-@font-face {
-    font-family: 'Museo300-Regular';
-    src: url('../assets/font/Museo300-Regular-webfont.woff2') format('woff2'),
-    url('../assets/font/Museo300-Regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .center {
     text-align: center;
 }
@@ -130,8 +120,6 @@ h4 {
     font-size: 2em;
 }
 
-/* Removed the margins for these, they were not doing anything as it's an inline element*/
-
 .button-text-inner {
     font-family: 'Museo500-Regular', sans-serif;
     font-size: 1.4em;
@@ -157,7 +145,17 @@ a:hover {
     color: #ffbb2a;
 }
 
-/**********BODY*****/
+.speaker_name{
+    font-family: 'Museo700-Regular', sans-serif;
+    font-size: 3em;
+    margin-bottom: 0.1em;
+}
+.speaker_subtitle{
+    font-family: 'MuseoSans', sans-serif;
+    margin-bottom: 1em;
+}
+
+/********** GENERAL **************/
 
 body {
     background-color: #f2f2f2;
@@ -165,7 +163,11 @@ body {
     overflow-x: hidden;
 }
 
-/**********NAVIGATION**********/
+img{
+    width: 100%;
+}
+
+/********** NAVIGATION **********/
 
 nav {
     width: 100%;
@@ -201,7 +203,6 @@ nav a {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #f2f2f2;
     z-index: 10;
     background-color: #607bbf;
     transition: all .7s ease-out;
@@ -455,6 +456,9 @@ nav a {
 .footer {
     background-color: #383838;
     padding: 3em;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3em;
 }
 
 .footer p {
