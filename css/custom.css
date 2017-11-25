@@ -1,13 +1,36 @@
 /******** MARGINS ********/
 
-.mt-5{margin-top: 5%;}
-.mt-10{margin-top: 10%;}
-.mt-15{margin-top: 15%;}
-.mt-20{margin-top: 20%;}
-.mt-25{margin-top: 25%;}
-.mt-30{margin-top: 30%;}
-.mt-35{margin-top: 35%;}
-.mt-40{margin-top: 40%;}
+.mt-5 {
+    margin-top: 5%;
+}
+
+.mt-10 {
+    margin-top: 10%;
+}
+
+.mt-15 {
+    margin-top: 15%;
+}
+
+.mt-20 {
+    margin-top: 20%;
+}
+
+.mt-25 {
+    margin-top: 25%;
+}
+
+.mt-30 {
+    margin-top: 30%;
+}
+
+.mt-35 {
+    margin-top: 35%;
+}
+
+.mt-40 {
+    margin-top: 40%;
+}
 
 
 /**********COLOURS*************/
@@ -145,12 +168,13 @@ a:hover {
     color: #ffbb2a;
 }
 
-.speaker_name{
+.speaker_name {
     font-family: 'Museo700-Regular', sans-serif;
     font-size: 3em;
     margin-bottom: 0.1em;
 }
-.speaker_subtitle{
+
+.speaker_subtitle {
     font-family: 'MuseoSans', sans-serif;
     margin-bottom: 1em;
 }
@@ -163,7 +187,7 @@ body {
     overflow-x: hidden;
 }
 
-img{
+img {
     width: 100%;
 }
 
@@ -191,7 +215,7 @@ nav a {
     color: #484848;
 }
 
-#main_menu{
+#main_menu {
     position: absolute;
     width: 100%;
     text-align: center;
@@ -207,7 +231,7 @@ nav a {
     background-color: #607bbf;
     transition: all .7s ease-out;
 
-    
+
 }
 
 #main_menu.fixed a {
@@ -216,8 +240,8 @@ nav a {
 
 /********* SVG METRO MAP *******/
 
-.metro-map{
-   position: absolute;
+.metro-map {
+    position: absolute;
     width: 72%;
     top: -17em;
     left: -12em;
@@ -366,7 +390,8 @@ nav a {
     width: 30em;
     height: 30em;
     background-image: url(../images/topography.png);
-    background-size: contain;}
+    background-size: contain;
+}
 
 #square4 {
     right: 76%;
@@ -374,7 +399,8 @@ nav a {
     width: 50em;
     height: 50em;
     background-image: url(../images/topography.png);
-    background-size: contain;}
+    background-size: contain;
+}
 
 #circle2 {
     left: 70%;
@@ -451,7 +477,25 @@ nav a {
     right: 100% !important;
 }
 
-/**********FOOTER**********/
+/*********** SPEAKERS *********/
+
+.speaker_container{
+    width: 40em;
+    height: 40em;
+    position: absolute;
+    left: -45%;
+    top: -10em;
+}
+.speaker_mask{
+    width: 150%;
+    left: -25%;
+    top: -25%;
+}
+.speaker_img{
+    position: absolute;
+}
+
+/********** FOOTER **********/
 
 .footer {
     background-color: #383838;
