@@ -38,6 +38,18 @@ function createArrayWithElements() {
 
 var objects = createArrayWithElements();
 
+/*----- LINE DRAWING TEST -----*/
+var path = document.getElementById('line_path');
+var path_length = path.getTotalLength();
+
+path.style.strokeDasharray = path_length;
+path.style.strokeDashoffset = path_length;
+
+var body = document.body,
+    html = document.documentElement;
+
+var doc_height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+
 
 
 
@@ -124,11 +136,11 @@ function update() {
 
     var currentScrollY = latestKnownScrollY;
     var windowHeight = window.innerHeight;
-    
-    
+
+
     //Fixed menu to top
     if (!fixed_menu) {
-        
+
         if (currentScrollY >= menuOrigin) {
             getID('main_menu').classList.add('fixed');
             fixed_menu = true;
@@ -136,6 +148,12 @@ function update() {
     } else if (currentScrollY <= menuOrigin) {
         getID('main_menu').classList.remove('fixed');
         fixed_menu = false;
+    }
+    
+    //Line drawing test;
+    if(path){
+        var stroke = (1 - (currentScrollY / (doc_height - windowHeight))) * path_length;
+        path.style.strokeDashoffset = stroke;
     }
 
     //Animates splash shapes
