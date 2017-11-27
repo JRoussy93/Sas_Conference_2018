@@ -145,7 +145,7 @@ h4 {
 
 .button-text-inner {
     font-family: 'Museo500-Regular', sans-serif;
-    font-size: 1.4em;
+    font-size: 1.4em !important;
 }
 
 p {
