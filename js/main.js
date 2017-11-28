@@ -22,8 +22,8 @@ var fixed_menu = false;
  * This array will be extended later with elements attributes values
  * like 'position'
  */
-function createArrayWithElements() {
-    var elements = document.getElementsByClassName('animate');
+function createArrayWithElements(className) {
+    var elements = document.getElementsByClassName(className);
     let finalElements = [];
 
   [].forEach.call(elements, function (el, i) {
@@ -36,7 +36,7 @@ function createArrayWithElements() {
     return finalElements;
 };
 
-var objects = createArrayWithElements();
+var objects = createArrayWithElements('animate');
 
 /*----- LINE DRAWING TEST -----*/
 var path = document.getElementById('line_path');
@@ -48,7 +48,7 @@ path.style.strokeDashoffset = path_length;
 var body = document.body,
     html = document.documentElement;
 
-var doc_height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+var doc_height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 
 
@@ -149,9 +149,9 @@ function update() {
         getID('main_menu').classList.remove('fixed');
         fixed_menu = false;
     }
-    
+
     //Line drawing test;
-    if(path){
+    if (path) {
         var stroke = (1 - (currentScrollY / (doc_height - windowHeight))) * path_length;
         path.style.strokeDashoffset = stroke;
     }
@@ -181,6 +181,7 @@ function update() {
     }
 
 }
+
 
 
 /*----------Let's start things up!-------------*/
