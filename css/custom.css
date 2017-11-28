@@ -496,6 +496,39 @@ nav a {
     position: absolute;
 }
 
+.slider{
+    position: relative;
+    width: 201vw;
+}
+.slider_item{
+    position: relative;
+    width: 100vw;
+    display: inline-block;
+    left: 0;
+    -webkit-transition: left 1s ease-in-out;
+    -o-transition: left 1s ease-in-out;
+    transition: left 1s ease-in-out;
+}
+
+.arrow{
+    width: 3em;
+    position: absolute;
+    top: 60%;
+    cursor: pointer;
+    display: none;
+}
+
+#left_arrow{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    left: 10vw;
+}
+#right_arrow{
+    left: calc(90vw - 3em);
+}
+
 /********** FOOTER **********/
 
 .footer {
