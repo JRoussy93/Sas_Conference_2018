@@ -164,6 +164,9 @@
         var width = speakers.length * 100 + 1 + 'vw';
         getID('speakers_slider').style.width = width;
         
+        for(var i=0; i<speakers.length; i++){
+                speakers[i].style[transformProp] = 'translate3D(0,0,1px)';
+            }
         
         var slideIndex = 0;
         
@@ -172,7 +175,8 @@
         function slide(x){
             slideIndex += x;
             for(var i=0; i<speakers.length; i++){
-                speakers[i].style.left = slideIndex * 100 +'vw';
+                //speakers[i].style.left = slideIndex * 100 +'vw';
+                speakers[i].style[transformProp] = 'translate3D('+ slideIndex * 100 +'%,0,1px)';
             }
             showArrows();
         }

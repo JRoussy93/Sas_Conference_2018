@@ -505,9 +505,10 @@ nav a {
     width: 100vw;
     display: inline-block;
     left: 0;
-    -webkit-transition: left 1s ease-in-out;
-    -o-transition: left 1s ease-in-out;
-    transition: left 1s ease-in-out;
+    -webkit-transition: transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    z-index: -1;
 }
 
 .arrow{
