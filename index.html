@@ -51,11 +51,12 @@
 
 		<nav>
 			<ul>
+				<li><a class="menu_item" href="#">Home</a></li>
 				<li><a class="menu_item" href="#">Conference</a></li>
 				<li><a class="menu_item" href="#">Registration</a></li>
 				<li><a class="menu_item" href="#">Travel Info</a></li>
-				<li><a class="menu_item" href="#">News</a></li>
-				<li><a class="menu_item" href="#">Contact</a></li>
+<!--				<li><a class="menu_item" href="#">News</a></li>-->
+				<li><a class="menu_item" href="#">Contact Us</a></li>
 			</ul>
 		</nav>
 
@@ -176,7 +177,7 @@
 
 	<div class="container" style="width: 100%; max-width: 100%">
 		<div class="columns ten offset-by-two">
-			<img style="width:100%" src="images/map.jpg">
+			<div id="map" style="width: 100%; height: 50em;"></div>
 		</div>
 	</div>
 	
@@ -219,6 +220,18 @@
 	<script>
 		var rellax = new Rellax('.rellax');
 	</script>
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+	<script>
+        //Mapbox
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYW5ndW8iLCJhIjoiY2o4aHN1dDJoMHhiOTMybmFrb2w3dTUxcyJ9.RCZX0rOSYhKcn4y0k5UIOw';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/anguo/cj950z08w0i742sqyh7x5hj59', // stylesheet location
+            center: [-73.574, 45.485], // starting position [lng, lat]
+            zoom: 10 // starting zoom
+        });
+    </script>
 
 	<!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

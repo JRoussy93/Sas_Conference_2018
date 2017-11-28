@@ -196,13 +196,13 @@ img {
 
 nav {
     width: 100%;
-    margin: 1.9em 0;
+    margin: 1em;
 }
 
 nav ul {
     display: block;
     text-align: center;
-
+    margin-bottom: 0;
 }
 
 nav li {
@@ -229,14 +229,14 @@ nav a {
     top: 0;
     left: 0;
     z-index: 10;
-    background-color: #607bbf;
+/*    background-color: #607bbf;*/
+    background-color: #ebebeb;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
     transition: all .7s ease-out;
-
-
 }
 
 #main_menu.fixed a {
-    color: #ffffff;
+/*    color: #ffffff;*/
 }
 
 /********* SVG METRO MAP *******/
@@ -486,6 +486,7 @@ nav a {
     position: absolute;
     left: -45%;
     top: -10em;
+    overflow: hidden;
 }
 .speaker_mask{
     width: 150%;
@@ -517,6 +518,16 @@ nav a {
     top: 60%;
     cursor: pointer;
     display: none;
+    padding: .5em;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.arrow:hover{
+    -webkit-transform: translate3D(15%, 0, 0);
+    -ms-transform: translate3D(15%, 0, 0);
+    -o-transform: translate3D(15%, 0, 0);
+    transform: translate3D(15%, 0, 0);
 }
 
 #left_arrow{
@@ -524,10 +535,18 @@ nav a {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
-    left: 10vw;
+    left: calc(10vw - 0.5em);
 }
+#left_arrow:hover{
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+
 #right_arrow{
-    left: calc(90vw - 3em);
+    left: calc(90vw - 3.5em);
 }
 
 /********** FOOTER **********/

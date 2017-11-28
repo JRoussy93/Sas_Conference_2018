@@ -39,16 +39,16 @@ function createArrayWithElements(className) {
 var objects = createArrayWithElements('animate');
 
 /*----- LINE DRAWING TEST -----*/
-var path = document.getElementById('line_path');
-var path_length = path.getTotalLength();
-
-path.style.strokeDasharray = path_length;
-path.style.strokeDashoffset = path_length;
-
-var body = document.body,
-    html = document.documentElement;
-
-var doc_height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+//var path = document.getElementById('line_path');
+//var path_length = path.getTotalLength();
+//
+//path.style.strokeDasharray = path_length;
+//path.style.strokeDashoffset = path_length;
+//
+//var body = document.body,
+//    html = document.documentElement;
+//
+//var doc_height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 
 
@@ -150,11 +150,11 @@ function update() {
         fixed_menu = false;
     }
 
-    //Line drawing test;
-    if (path) {
-        var stroke = (1 - (currentScrollY / (doc_height - windowHeight))) * path_length;
-        path.style.strokeDashoffset = stroke;
-    }
+//    //Line drawing test;
+//    if (path) {
+//        var stroke = (1 - (currentScrollY / (doc_height - windowHeight))) * path_length;
+//        path.style.strokeDashoffset = stroke;
+//    }
 
     //Animates splash shapes
     if (getID('splash')) { //if the page has a splash screen
