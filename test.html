@@ -18,9 +18,20 @@
             fill: rgba(95, 125, 191, 0);
             stroke-linecap: round;
             stroke-linejoin: round;
+            cursor: pointer;
+        }
+
+        .path-transition {
+            transition: stroke-dashoffset 2s ease-in-out, fill 1s ease-in-out 1.5s, stroke 1s ease-in-out 1.5s;
+        }
+
+        .draw {
+            stroke-dashoffset: 0 !important;
+            fill: rgba(95, 125, 191, 1);
+            stroke: rgba(95, 125, 191, 0);
         }
     </style>
-    <svg class="splash_text" id="then" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 163.5" onclick="pathDraw()">
+    <svg class="splash_text" id="then" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 163.5" onclick="pathReDraw()">
         <g>
             <path class="anim_path purplebg" id="then_t" d="M62.47,37.51H41.84a3.78,3.78,0,0,0-4.16,4.16v8.14H15.91V28.61c0-8.89,3-12.11,12.11-12.11h93.69c9.08,0,12.11,3.22,12.11,12.11v21.2H112.05V41.67a3.78,3.78,0,0,0-4.16-4.16H87.26V150.87H62.47Z"/>
             <path class="anim_path purplebg" id="then_h" d="M155.4,41.67a3.79,3.79,0,0,0-4.17-4.16h-8.14v-21h24.23c9.08,0,12.87,4,12.87,12.87V73.46h59.24V29.37c0-8.9,4-12.87,12.86-12.87h24.23v21h-8.14a3.78,3.78,0,0,0-4.16,4.16v109.2H239.43V94.47H180.19v56.4H155.4Z"/>
@@ -32,21 +43,38 @@
     <script>
         var paths = document.getElementsByClassName('anim_path');
 
-        for (var i = 0; i < paths.length; i++) {
-            var path_length = paths[i].getTotalLength();
-            paths[i].style.strokeDasharray = path_length;
-            paths[i].style.strokeDashoffset = path_length;
+        function setStrokes() {
+            for (var i = 0; i < paths.length; i++) {
+                var path_length = paths[i].getTotalLength();
+                paths[i].style.strokeDasharray = path_length;
+                paths[i].style.strokeDashoffset = path_length;
+
+            }
+        }
+
+        function setTransition() {
+            for (var i = 0; i < paths.length; i++) {
+                paths[i].classList.toggle("path-transition");
+            }
         }
 
         function pathDraw() {
             for (var i = 0; i < paths.length; i++) {
-                paths[i].style.transition = "stroke-dashoffset 2s ease-in-out, fill 2s ease-in-out 2s, stroke 2s ease-in-out 2s";
-                paths[i].style.strokeDashoffset = 0;
-                paths[i].style.fill = "rgba(95, 125, 191,1)";
-                paths[i].style.stroke = "rgba(95, 125, 191,0)";
+                paths[i].classList.toggle("draw");
             }
         }
-        
+
+        function pathReDraw() {
+            setTransition();
+            pathDraw();
+            setStrokes();
+
+            setTransition();
+            pathDraw();
+        }
+
+        setStrokes();
+        setTimeout(setTransition, 10);
         setTimeout(pathDraw, 500);
     </script>
 </body>
