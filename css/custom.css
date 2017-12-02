@@ -229,14 +229,14 @@ nav a {
     top: 0;
     left: 0;
     z-index: 10;
-/*    background-color: #607bbf;*/
+    /*    background-color: #607bbf;*/
     background-color: #ebebeb;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     transition: all .7s ease-out;
 }
 
 #main_menu.fixed a {
-/*    color: #ffffff;*/
+    /*    color: #ffffff;*/
 }
 
 /********* SVG METRO MAP *******/
@@ -254,6 +254,7 @@ nav a {
     height: 90vh;
     width: 100%;
     position: relative;
+    width: 100vw;
     display: flex;
 }
 
@@ -282,18 +283,44 @@ nav a {
 }
 
 .splash_text {
-    font-size: 10vmax;
     display: inline-block;
     margin: auto;
 }
 
-#then,
-#next {
-    color: #fff;
+#then {
+    width: 26vmax;
 }
 
 #now {
-    color: #5f7dbf;
+    width: 24.6vmax;
+}
+
+#next {
+    width: 24.6vmax;
+}
+
+
+.anim_path {
+    stroke-width: .5em;
+    fill: rgba(95, 125, 191, 0);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    cursor: pointer;
+}
+
+.path-transition {
+    transition: stroke-dashoffset 2s ease-in-out, fill 1s ease-in-out 1.5s, stroke-width 1s ease-in-out 1.5s;
+}
+
+.draw {
+    stroke-dashoffset: 0 !important;
+    fill: rgba(95, 125, 191, 1);
+    stroke-width: 0em;
+    stroke: #5f7dbf;
+}
+#next .draw, #then .draw{
+    fill: rgba(255,255,255,1);
+    stroke: #fff;
 }
 
 /******** SHAPES ********/
@@ -480,7 +507,7 @@ nav a {
 
 /*********** SPEAKERS *********/
 
-.speaker_container{
+.speaker_container {
     width: 40em;
     height: 40em;
     position: absolute;
@@ -488,20 +515,23 @@ nav a {
     top: -10em;
     overflow: hidden;
 }
-.speaker_mask{
+
+.speaker_mask {
     width: 150%;
     left: -25%;
     top: -25%;
 }
-.speaker_img{
+
+.speaker_img {
     position: absolute;
 }
 
-.slider{
+.slider {
     position: relative;
     width: 201vw;
 }
-.slider_item{
+
+.slider_item {
     position: relative;
     width: 100vw;
     display: inline-block;
@@ -512,7 +542,7 @@ nav a {
     z-index: -1;
 }
 
-.arrow{
+.arrow {
     width: 3em;
     position: absolute;
     top: 60%;
@@ -523,21 +553,23 @@ nav a {
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
-.arrow:hover{
+
+.arrow:hover {
     -webkit-transform: translate3D(15%, 0, 0);
     -ms-transform: translate3D(15%, 0, 0);
     -o-transform: translate3D(15%, 0, 0);
     transform: translate3D(15%, 0, 0);
 }
 
-#left_arrow{
+#left_arrow {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
     left: calc(10vw - 0.5em);
 }
-#left_arrow:hover{
+
+#left_arrow:hover {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
@@ -545,7 +577,7 @@ nav a {
 }
 
 
-#right_arrow{
+#right_arrow {
     left: calc(90vw - 3.5em);
 }
 
