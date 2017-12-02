@@ -270,10 +270,10 @@ nav a {
     bottom: 10vmax;
     right: -20vmax;
     transform-origin: center center;
-    -webkit-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    transform: rotate(10deg);
 }
 
 #splash_triangle,
@@ -289,14 +289,17 @@ nav a {
 
 #then {
     width: 26vmax;
+    min-width: 20em;
 }
 
 #now {
     width: 24.6vmax;
+    min-width: 19em;
 }
 
 #next {
     width: 24.6vmax;
+    min-width: 19em;
 }
 
 
@@ -692,5 +695,30 @@ li {
 
     li.date p {
         margin: 0;
+    }
+}
+
+@media all and (max-width: 1000px){
+    #splash{
+        display: block;
+    }
+    .splash_text{
+        position: absolute;
+    }
+    #then{
+        top:25%;
+        left:2%;
+    }
+    #now{
+        top: 45%;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    #next{
+        top: 65%;
+        right: 4%;
     }
 }
