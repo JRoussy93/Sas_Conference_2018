@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <style>
+        #then {
+            width: 30%;
+        }
+
+        .anim_path {
+            stroke: rgba(95, 125, 191, 1);
+            stroke-width: .05em;
+            fill: rgba(95, 125, 191, 0);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+    <svg class="splash_text" id="then" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545 163.5" onclick="pathDraw()">
+        <g>
+            <path class="anim_path purplebg" id="then_t" d="M62.47,37.51H41.84a3.78,3.78,0,0,0-4.16,4.16v8.14H15.91V28.61c0-8.89,3-12.11,12.11-12.11h93.69c9.08,0,12.11,3.22,12.11,12.11v21.2H112.05V41.67a3.78,3.78,0,0,0-4.16-4.16H87.26V150.87H62.47Z"/>
+            <path class="anim_path purplebg" id="then_h" d="M155.4,41.67a3.79,3.79,0,0,0-4.17-4.16h-8.14v-21h24.23c9.08,0,12.87,4,12.87,12.87V73.46h59.24V29.37c0-8.9,4-12.87,12.86-12.87h24.23v21h-8.14a3.78,3.78,0,0,0-4.16,4.16v109.2H239.43V94.47H180.19v56.4H155.4Z"/>
+            <path class="anim_path purplebg" id="then_e" d="M301.69,37.51h-12.3v-21h81.19c8.9,0,12.87,4,12.87,12.87V49.81H360.93V41.67a3.78,3.78,0,0,0-4.16-4.16H326.49v35.2H370v21H326.49v32a3.78,3.78,0,0,0,4.16,4.16h31a3.78,3.78,0,0,0,4.16-4.16v-8.14h22.52V138c0,9.08-4,12.87-12.87,12.87H314.56c-9.08,0-12.87-3.79-12.87-12.87Z"/>
+            <path class="anim_path purplebg" id="then_n" d="M398.78,129.86h8.14a3.78,3.78,0,0,0,4.16-4.16V16.5h22.34l50.91,74.38c5.3,7.75,11.16,18.92,11.16,18.92h.38s-1.32-11.17-1.32-18.92V29.37c0-8.9,3.78-12.87,12.87-12.87h24.22v21H523.5a3.78,3.78,0,0,0-4.16,4.16v109.2H497.2L446.1,76.68a202.83,202.83,0,0,1-11.17-18.92h-.38s1.33,11.16,1.33,18.92V138c0,9.08-3.79,12.87-12.87,12.87H398.78Z"/>
+        </g>
+    </svg>
+
+    <script>
+        var paths = document.getElementsByClassName('anim_path');
+
+        for (var i = 0; i < paths.length; i++) {
+            var path_length = paths[i].getTotalLength();
+            paths[i].style.strokeDasharray = path_length;
+            paths[i].style.strokeDashoffset = path_length;
+        }
+
+        function pathDraw() {
+            for (var i = 0; i < paths.length; i++) {
+                paths[i].style.transition = "stroke-dashoffset 2s ease-in-out, fill 2s ease-in-out 2s, stroke 2s ease-in-out 2s";
+                paths[i].style.strokeDashoffset = 0;
+                paths[i].style.fill = "rgba(95, 125, 191,1)";
+                paths[i].style.stroke = "rgba(95, 125, 191,0)";
+            }
+        }
+        
+        setTimeout(pathDraw, 500);
+    </script>
+</body>
+</html>
