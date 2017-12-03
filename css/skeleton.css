@@ -408,8 +408,18 @@ there.
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
 
+@media (max-width: 550px) {
+	.offset-by-two.column, .offset-by-two.columns { margin-left: 0% !important;}
+}
+
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+}
+/*  tablet and smaller*/
+@media (max-width: 750px) {
+	.five.columns { width: 100%;}
+	.offset-by-two.column, .offset-by-two.columns { margin-left: 4%;}
+}
 
 /* Larger than desktop */
 @media (min-width: 1000px) {}

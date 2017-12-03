@@ -23,6 +23,17 @@
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="images/favicon.png">
+     
+     
+<style type="text/css">
+		.antispam { display:none;}
+</style>
+	
+<script type="text/javascript">
+		// split your email into two parts and remove the @ symbol
+		var first = "yourname";
+		var last = "yoursite.com";
+</script>
 
      
 </head>
@@ -131,29 +142,40 @@
                     <h2 class="purple mt-5  "> If you have any questions about the conference please feel free to send us a shout. We will get back to you as soon as possible! </h2>
                     
                     <!-- The above form looks like this -->
-<form>
-  <div class="row mt-10">
-   
-    <div class="five columns offset-by-two">
-      <label for="exampleEmailInput">Your email</label>
-      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
-    </div>
-    
-    <div class="five columns">
-      <label for="exampleRecipientInput">Reason for contacting</label>
-      <select class="u-full-width" id="exampleRecipientInput">
-        <option value="Option 1">Conference Questions</option>
-        <option value="Option 2">Transportation Questions</option>
-        <option value="Option 3">Submitting a Paper</option>
-      </select>
-    </div>
-    
-  </div>
-  <label class="ten columns offset-by-two" for="exampleMessage">Message</label>
-  <textarea class="ten columns offset-by-two" placeholder="Hi  …" id="exampleMessage"></textarea>
- 
-  <input style="color: #f5774f;" class="mt-2 button-text-inner five columns" type="submit" value="+ Send">
-</form>
+
+
+
+<form method="post" action="submit.php">
+	
+		<p>Your name:
+		<br /><input name="name" /></p>
+		
+		<p>Your email:
+		<br /><input name="email" /></p>
+		
+		<!-- Important: if you add any fields to this page, you will also need to update the php script -->
+		
+		<p class="antispam">Leave this empty:
+		<br /><input name="url" /></p>
+		
+		<p>Your message:
+		<br /><textarea name="message" rows="10" cols="50"></textarea></p>
+		
+		<p><input type="submit" value="Send" /></p>
+		
+	</form>
+	
+	
+	<p>My e-mail address:
+	<script type="text/javascript">
+		document.write('<a href="mailto:'+first + '@' + last+'">'+first + '@' + last+'<\/a>');
+	</script>
+	<noscript>
+	Please enable javascript or use the contact form.
+	</noscript>
+	</p>
+
+
 
 <!-- Always wrap checkbox and radio inputs in a label and use a <span class="label-body"> inside of it -->
 

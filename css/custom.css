@@ -489,6 +489,11 @@ nav a {
     top: -16em;
 }
 
+#triangle4{
+    left: -37%;
+    width: 26em;
+     top: -9em;}
+
 .square {
     width: 40em;
     height: 40em;
@@ -525,6 +530,10 @@ nav a {
     right: 60%;
     top: -6em;
 }
+
+#circle3 {
+    right: -28%;
+    top: -25em;}
 
 #square2 {
     left: 80%;
