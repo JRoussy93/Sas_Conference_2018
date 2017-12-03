@@ -186,6 +186,7 @@ body {
     background-color: #f2f2f2;
     color: #363636;
     overflow-x: hidden;
+    width: 100%;
 }
 
 img {
