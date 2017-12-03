@@ -39,7 +39,7 @@
 /**********NAVAGATION*************/
 
 #trigger {
-	font-size:20px;
+	font-size:35px;
 	cursor:pointer;
 	position:fixed;
 	top:20px;
@@ -47,6 +47,12 @@
 	z-index: 9;
 	color: #ff5661;
 	font-weight:bold;
+}
+
+.menu-title{
+	font-size: 15px;
+	 position: relative;
+           top: -5px;
 }
 
 .overlay {
@@ -245,7 +251,7 @@ h1.big-title {
 
 h2 {
     font-family: 'Museo500-Regular', sans-serif;
-    line-height: 1.7em;
+    line-height: 1.2em;
 }
 
 h4 {
@@ -493,6 +499,18 @@ nav a {
     left: -37%;
     width: 26em;
      top: -9em;}
+
+#triangle5 {
+    left: -26%;
+    width: 9.5em;
+    top: -1em;
+}
+.shapeholder2 {
+    position: relative;
+    float: left;
+    width: 100%;
+    z-index: 1;
+}
 
 .square {
     width: 40em;
