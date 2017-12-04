@@ -13,9 +13,10 @@ var latestKnownScrollY = 0;
 //Is the animation already updating?
 var ticking = false;
 
-var main_menu = getID('main_menu');
-var menuOrigin = getPosition(main_menu);
-var fixed_menu = false;
+//Variables for previous menu handling
+//var main_menu = getID('main_menu');
+//var menuOrigin = getPosition(main_menu);
+//var fixed_menu = false;
 
 /**
  * Generate initial array with elements as objects
@@ -71,16 +72,17 @@ var transformProp = window.transformProp || (function () {
 })();
 
 //Calculates distance of element from top of document, looping through its parent elements
-function getPosition(element) {
-    var yPosition = 0;
-
-    while (element) {
-        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-        element = element.offsetParent;
-    }
-
-    return yPosition;
-}
+//NOT NEEDED IF NOT USING FIXED MENU
+//function getPosition(element) {
+//    var yPosition = 0;
+//
+//    while (element) {
+//        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+//        element = element.offsetParent;
+//    }
+//
+//    return yPosition;
+//}
 
 //Easing functions
 // t: current time, b: begInnIng value, c: change In value, d: duration
@@ -127,16 +129,16 @@ function update() {
 
 
     //Fixed menu to top
-    if (!fixed_menu) {
-
-        if (currentScrollY >= menuOrigin) {
-            getID('main_menu').classList.add('fixed');
-            fixed_menu = true;
-        }
-    } else if (currentScrollY <= menuOrigin) {
-        getID('main_menu').classList.remove('fixed');
-        fixed_menu = false;
-    }
+//    if (!fixed_menu) {
+//
+//        if (currentScrollY >= menuOrigin) {
+//            getID('main_menu').classList.add('fixed');
+//            fixed_menu = true;
+//        }
+//    } else if (currentScrollY <= menuOrigin) {
+//        getID('main_menu').classList.remove('fixed');
+//        fixed_menu = false;
+//    }
 
 
     //Animates splash shapes
