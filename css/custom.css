@@ -1,4 +1,5 @@
 /******** MARGINS ********/
+
 .mt-2 {
     margin-top: 2em;
 }
@@ -36,32 +37,32 @@
 }
 
 
-/**********NAVAGATION*************/
+/**********NAVIGATION*************/
 
 #trigger {
-	font-size:35px;
-	cursor:pointer;
-	position:fixed;
-	top:20px;
-	right:20px;
-	z-index: 9;
-	color: #ff5661;
-	font-weight:bold;
+    font-size: 35px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9;
+    color: #ff5661;
+    font-weight: bold;
 }
 
-.menu-title{
-	font-size: 15px;
-	 position: relative;
-           top: -5px;
+.menu-title {
+    font-size: 15px;
+    position: relative;
+    top: -5px;
 }
 
 .overlay {
-	margin: 0;
+    margin: 0;
     height: 100%;
     width: 0;
     position: fixed;
-	flex-flow: row wrap;
-           justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-around;
     z-index: 11;
     top: 0;
     left: 0;
@@ -71,8 +72,8 @@
 }
 
 .overlay-content {
-       display: flex;
-	flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     top: 0%;
     width: 100%;
@@ -81,39 +82,59 @@
     margin-top: 0px;
 }
 
-.flex1{order: 1;  width: 50%; }
-.flex2{order: 2; width: 50%; }
-.flex3{order: 3;  flex: 3; }
-.flex4{order: 4;  flex: 3; }
-.flex5{ order: 5; flex: 3; }
+.flex1 {
+    order: 1;
+    width: 50%;
+}
+
+.flex2 {
+    order: 2;
+    width: 50%;
+}
+
+.flex3 {
+    order: 3;
+    flex: 3;
+}
+
+.flex4 {
+    order: 4;
+    flex: 3;
+}
+
+.flex5 {
+    order: 5;
+    flex: 3;
+}
 
 .overlay a {
     padding: 8px;
-	z-index: 999;
+    z-index: 999;
     text-decoration: none;
     color: #ffffff;
     display: block;
     transition: 0.3s;
 }
 
-.top-nav{
-	font-size: 2em;
-	font-family: 'Museo700-Regular';
-	text-transform:uppercase;
-	letter-spacing: 1px;
+.top-nav {
+    font-size: 2em;
+    font-family: 'Museo700-Regular';
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.secondary-nav{
-	font-size: 1.5em;
+.secondary-nav {
+    font-size: 1.5em;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
     color: #f1f1f1;
 }
 
 .overlay a.current {
-	color:#CFF;
-	font-style:italic;
+    color: #CFF;
+    font-style: italic;
 }
 
 .closebtn {
@@ -121,35 +142,19 @@
     top: 20px;
     right: 20px;
     font-size: 40px !important;
-	line-height:0px;
+    line-height: 0px;
 }
 
 @media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px;}
-  .closebtn {
-    font-size: 40px !important;
-    top: 15px;
-    right: 35px;
-  }
+    .overlay a {
+        font-size: 20px;
+    }
+    .closebtn {
+        font-size: 40px !important;
+        top: 15px;
+        right: 35px;
+    }
 }
-	    
-	
-nav{
-    background-image: url(../img/nav-beige.png);
-    height: 150px;
-    background-size: cover;
-    z-index: 999;
-    position: relative;
-}
-
-
-nav img{
-    width: 180px !important;
-    margin: 0 auto;
-    display: block;
-    position: relative;
-    top: 4em;
-} 	
 
 
 
@@ -442,8 +447,10 @@ nav a {
     stroke-width: 0em;
     stroke: #5f7dbf;
 }
-#next .draw, #then .draw{
-    fill: rgba(255,255,255,1);
+
+#next .draw,
+#then .draw {
+    fill: rgba(255, 255, 255, 1);
     stroke: #fff;
 }
 
@@ -495,16 +502,18 @@ nav a {
     top: -16em;
 }
 
-#triangle4{
+#triangle4 {
     left: -37%;
     width: 26em;
-     top: -9em;}
+    top: -9em;
+}
 
 #triangle5 {
     left: -26%;
     width: 9.5em;
     top: -1em;
 }
+
 .shapeholder2 {
     position: relative;
     float: left;
@@ -551,7 +560,8 @@ nav a {
 
 #circle3 {
     right: -28%;
-    top: -25em;}
+    top: -25em;
+}
 
 #square2 {
     left: 80%;
@@ -562,8 +572,6 @@ nav a {
     top: 12em;
     width: 30em;
     height: 30em;
-    background-image: url(../images/topography.png);
-    background-size: contain;
 }
 
 #square4 {
@@ -621,10 +629,10 @@ nav a {
 
 .animate {
     transition: all .7s ease-in-out;
-    -webkit-transform: translate3D(0em,0,0);
-    -ms-transform: translate3D(0em,0,0);
-    -o-transform: translate3D(0em,0,0);
-    transform: translate3D(0em,0,0);
+    -webkit-transform: translate3D(0em, 0, 0);
+    -ms-transform: translate3D(0em, 0, 0);
+    -o-transform: translate3D(0em, 0, 0);
+    transform: translate3D(0em, 0, 0);
     opacity: 1;
 }
 
@@ -633,17 +641,17 @@ nav a {
 }
 
 .from_right.out {
-    -webkit-transform: translate3D(3em,0,0);
-    -ms-transform: translate3D(3em,0,0);
-    -o-transform: translate3D(3em,0,0);
-    transform: translate3D(3em,0,0);
+    -webkit-transform: translate3D(3em, 0, 0);
+    -ms-transform: translate3D(3em, 0, 0);
+    -o-transform: translate3D(3em, 0, 0);
+    transform: translate3D(3em, 0, 0);
 }
 
 .from_left.out {
-    -webkit-transform: translate3D(-3em,0,0);
-    -ms-transform: translate3D(-3em,0,0);
-    -o-transform: translate3D(-3em,0,0);
-    transform: translate3D(-3em,0,0);
+    -webkit-transform: translate3D(-3em, 0, 0);
+    -ms-transform: translate3D(-3em, 0, 0);
+    -o-transform: translate3D(-3em, 0, 0);
+    transform: translate3D(-3em, 0, 0);
 }
 
 .shape.out {
@@ -838,41 +846,57 @@ li {
     li.date p {
         margin: 0;
     }
-	
-	
-	
-.flex1{order: 1;  width: 100%; }
-.flex2{order: 2; width: 100%; }
-.flex3{order: 3;  width: 100%; flex: auto; }
-.flex4{order: 4;  width: 100%; flex: auto; }
-.flex5{ order: 5; width: 100%; flex: auto; }
-	
-	
-.flex3 .mt-10,  .flex4 .mt-10, .flex5 .mt-10  {  margin-top: 2em; }	
+
+
+
+    .flex1 {
+        order: 1;
+        width: 100%;
+    }
+    .flex2 {
+        order: 2;
+        width: 100%;
+    }
+    .flex3 {
+        order: 3;
+        width: 100%;
+        flex: auto;
+    }
+    .flex4 {
+        order: 4;
+        width: 100%;
+        flex: auto;
+    }
+    .flex5 {
+        order: 5;
+        width: 100%;
+        flex: auto;
+    }
+
+
+    .flex3 .mt-10,
+    .flex4 .mt-10,
+    .flex5 .mt-10 {
+        margin-top: 2em;
+    }
 }
 
 
-@media all and (max-width: 769px) {
-
-h1.big-title {
-    font-size: 4.5em;
-}
-}
 
 
 
-@media all and (max-width: 1000px){
-    #splash{
+@media all and (max-width: 1000px) {
+    #splash {
         display: block;
     }
-    .splash_text{
+    .splash_text {
         position: absolute;
     }
-    #then{
-        top:25%;
-        left:2%;
+    #then {
+        top: 25%;
+        left: 2%;
     }
-    #now{
+    #now {
         top: 45%;
         left: 50%;
         -webkit-transform: translateX(-50%);
@@ -880,13 +904,24 @@ h1.big-title {
         -o-transform: translateX(-50%);
         transform: translateX(-50%);
     }
-    #next{
+    #next {
         top: 65%;
         right: 4%;
     }
 
-h1.big-title { font-size: 5em;}	
-	
-.mt-25{margin-top: 15em;}	
-	
+    h1.big-title {
+        font-size: 10vw;
+    }
+
+    .mt-25 {
+        margin-top: 15em;
+    }
+
+}
+
+@media all and (max-width: 550px) {
+
+    h1.big-title {
+        font-size: 16vw;
+    }
 }
