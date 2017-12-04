@@ -370,8 +370,8 @@ nav a {
 .metro-map {
     position: absolute;
     width: 72%;
-    top: -17em;
-    left: -12em;
+    top: -17vw;
+    left: -12vw;
 }
 
 /********* SPLASH PAGE *********/
@@ -668,7 +668,16 @@ nav a {
     top: -10em;
     overflow: hidden;
 }
-
+.speaker_right{
+    left:auto;
+    right:-45%;
+    
+}
+.speaker_container.circle{
+    width: 27em;
+    height: 27em;
+    margin: 4em;
+}
 .speaker_mask {
     width: 150%;
     left: -25%;
@@ -923,5 +932,16 @@ li {
 
     h1.big-title {
         font-size: 16vw;
+    }
+    .speaker_container{
+        position: relative;
+        top:auto;
+        margin-bottom: -8em;
+        width: 30em;
+        height: 30em;
+        left: -25%;
+    }
+    .speaker_container.circle{
+        margin-bottom: 0;
     }
 }
