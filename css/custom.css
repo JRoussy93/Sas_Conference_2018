@@ -46,8 +46,7 @@
     top: 20px;
     right: 20px;
     z-index: 9;
-    color: #ff5661;
-    text-shadow: 0 0 10px #f2f2f2;
+    color: #363636;
     font-family: 'MuseoSans', sans-serif;
     transition: all .2s ease-out;
 }
@@ -92,7 +91,7 @@
 .overlay {
     margin: 0;
     height: 100%;
-    width: 0%;
+    width: 100%;
     position: fixed;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -103,11 +102,11 @@
     background-color: #363636;
     transition: all 0.4s ease-out;
     transform-origin: top right;
-/*    transform: rotate(-90deg);*/
+    transform: rotate(-90deg);
 }
 .overlay.expanded{
     width: 100%;
-/*    transform: rotate(0deg);*/
+    transform: rotate(0deg);
 }
 
 .overlay-content {
@@ -401,6 +400,11 @@ a:hover {
     color: #ffbb2a;
 }
 
+.hash_anchor{
+    position: relative;
+    display: inline-block;
+    bottom: 6em;
+}
 .speaker_name {
     font-family: 'Museo700-Regular', sans-serif;
     font-size: 3em;
@@ -447,29 +451,6 @@ nav li {
 nav a {
     text-decoration: none;
     color: #484848;
-}
-
-#main_menu {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all .3s ease-out;
-}
-
-#main_menu.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    /*    background-color: #607bbf;*/
-    background-color: #ebebeb;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
-    transition: all .7s ease-out;
-}
-
-#main_menu.fixed a {
-    /*    color: #ffffff;*/
 }
 
 /********* SVG METRO MAP *******/
@@ -686,8 +667,6 @@ nav a {
     top: -10em;
     width: 50em;
     height: 50em;
-    background-image: url(../images/topography.png);
-    background-size: contain;
 }
 
 #circle2 {

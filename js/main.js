@@ -104,6 +104,11 @@ function initializeAnim() {
     }
 }
 
+//Menu toggle
+function expandMenu(){
+    getID('main_menu').classList.toggle('expanded');
+}
+
 //Sets the latestKnownScrollY variable to the latest scroll position, then calls for animation
 function onScroll() {
     latestKnownScrollY = window.pageYOffset; // using pageYOffset because scrollY is not supported by IE
@@ -180,6 +185,9 @@ update();
 //Listens for any scrolling on the screen, then calls the onScroll function.
 window.addEventListener('scroll', onScroll, false);
 
+//Makes menu buton clickable
+document.getElementById('trigger').addEventListener('click', expandMenu, false);
+document.getElementById('closebtn').addEventListener('click', expandMenu, false);
 
 /*
 Using animation optimizations taken from Rellax.js and https://www.html5rocks.com/en/tutorials/speed/animations/
