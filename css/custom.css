@@ -542,6 +542,19 @@ nav a {
     stroke: #fff;
 }
 
+<<<<<<< HEAD
+/******** CONTACT FORM********/
+
+textarea {
+	width: 100%;}
+
+form input{
+    line-height: normal;
+    width: 100%;
+    background-color: #ffffff61;
+    border-style: none;
+    height: 30px;
+=======
 #concordia_logo{
     position: absolute;
     height: auto;
@@ -554,6 +567,7 @@ nav a {
     width: 6em;
     top: 1.5em;
     left: 1.5em;
+>>>>>>> 7cffb0d69ccd1b6173d8b1068707fc64a93553c3
 }
 
 /******** SHAPES ********/
