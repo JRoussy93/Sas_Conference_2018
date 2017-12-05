@@ -542,6 +542,20 @@ nav a {
     stroke: #fff;
 }
 
+#concordia_logo{
+    position: absolute;
+    height: auto;
+    width: 12em;
+    top: 1.5em;
+    left: 9em;
+}
+#sas_logo{
+    position: absolute;
+    width: 6em;
+    top: 1.5em;
+    left: 1.5em;
+}
+
 /******** SHAPES ********/
 
 .shapeholder {
@@ -992,5 +1006,14 @@ li {
     }
     .megaphone{
         width: 50vw;
+    }
+    #concordia_logo{
+        left: 1em;
+        width: 10em;
+    }
+    #sas_logo{
+        top: 5em;
+        width: 4em;
+        left: 1em;
     }
 }
