@@ -194,7 +194,7 @@
     text-decoration: none;
     color: #ffffff;
     display: block;
-    transition: color .2s ease-out, transform .6s ease-out !important;
+    transition: color .2s ease-out, transform .8s ease-out !important;
     -webkit-transform: translate3D(10em, 0, 0);
     -ms-transform: translate3D(10em, 0, 0);
     -o-transform: translate3D(10em, 0, 0);
@@ -236,6 +236,32 @@
     right: .2em;
     font-size: 4em !important;
     line-height: 0px;
+}
+
+@media all and (max-width: 700px){
+    .flex3{
+        order: 1 !important;
+    }
+    .flex1{
+        order: 2 !important;
+    }
+    .flex2{
+        order: 3 !important;
+    }
+    .flex1 .mt-10, .flex2 .mt-10{
+        margin-top: 3em; 
+    }
+    #nav-circle{
+        top: 2em;
+        left: -1em;
+    }
+    #nav-square{
+        bottom: 0;
+        right: -1em;
+    }
+    .flex5{
+        margin-bottom: 2em;
+    }
 }
 
 /**********COLOURS*************/
