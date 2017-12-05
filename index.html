@@ -286,10 +286,12 @@
     </script>
     <script>
         //Splash text animation
-        var paths = document.getElementsByClassName('anim_path');
+        var then = document.getElementsByClassName('then');
+        var now = document.getElementsByClassName('now');
+        var next = document.getElementsByClassName('next');
         var firstTime = true;
 
-        function setStrokes() {
+        function setStrokes(paths) {
             for (var i = 0; i < paths.length; i++) {
                 var path_length = paths[i].getTotalLength();
                 paths[i].style.strokeDasharray = path_length;
@@ -298,62 +300,64 @@
             }
         }
 
-        function setTransition() {
+        function setTransition(paths) {
             for (var i = 0; i < paths.length; i++) {
                 paths[i].classList.toggle("path-transition");
             }
         }
 
-        function pathDraw() {
+        function pathDraw(paths) {
             for (var i = 0; i < paths.length; i++) {
                 paths[i].classList.toggle("draw");
             }
         }
 
-        function pathReDraw() {
-            setTransition();
-            pathDraw();
-            setStrokes();
+        function pathReDraw(paths) {
+            setTransition(paths);
+            pathDraw(paths);
+            setStrokes(paths);
             setTimeout(function() {
-                setTransition();
-                pathDraw();
+                setTransition(paths);
+                pathDraw(paths);
             }, 50);
         }
 
-        function drawThis(x) {
-            paths = document.getElementsByClassName('anim_path ' + x);
+        function drawThis(paths) {
+            
             if (firstTime) {
-                pathDraw();
+                pathDraw(paths);
             } else {
-                pathReDraw();
+                pathReDraw(paths);
             }
         }
 
-        setStrokes();
-        setTimeout(setTransition, 10);
+        setStrokes(then);
+        setStrokes(now);
+        setStrokes(next);
+        setTimeout(function(){
+            setTransition(then);
+            setTransition(now);
+            setTransition(next);
+        }, 10);
         setTimeout(function() {
-            drawThis('then');
+            drawThis(then);
         }, 500);
         setTimeout(function() {
-            drawThis('now');
+            drawThis(now);
         }, 1500);
         setTimeout(function() {
-            drawThis('next');
+            drawThis(next);
         }, 2500);
         setTimeout(function() {
             firstTime = false;
             document.getElementById('then').addEventListener("click", function() {
-                drawThis('then');
+                drawThis(then);
             });
             document.getElementById('now').addEventListener("click", function() {
-                drawThis('now');
+                drawThis(now);
             });
             document.getElementById('next').addEventListener("click", function() {
-                drawThis('next');
-//                var text = document.getElementsByClassName('splash_text');
-//                for(var i=0; i<text.length; i++){
-//                    text[i].style.display = 'none';
-//                }
+                drawThis(next);
             });
 
         }, 2510);
