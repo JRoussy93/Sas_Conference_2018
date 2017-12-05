@@ -542,7 +542,12 @@ nav a {
     stroke: #fff;
 }
 
-
+.subtitle{
+    width: 100%;
+    text-align: center;
+    font-family: "MuseoSans";
+    font-size: 1.5em;
+}
 /******** CONTACT FORM********/
 
 textarea {
