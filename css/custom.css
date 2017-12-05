@@ -542,6 +542,19 @@ nav a {
     stroke: #fff;
 }
 
+/******** CONTACT FORM********/
+
+textarea {
+	width: 100%;}
+
+form input{
+    line-height: normal;
+    width: 100%;
+    background-color: #ffffff61;
+    border-style: none;
+    height: 30px;
+}
+
 /******** SHAPES ********/
 
 .shapeholder {
