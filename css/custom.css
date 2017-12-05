@@ -171,7 +171,7 @@
     z-index: -1;
     width: 15em;
     height: 15em;
-    right: 5em;
+    left: 4em;
     bottom: 2em;
     -webkit-transform:translate3D(10em,0,0) rotate(-25deg);
     -ms-transform: translate3D(10em,0,0) rotate(-25deg);
@@ -258,6 +258,7 @@
     #nav-square{
         bottom: 0;
         right: -1em;
+        left: auto;
     }
     .flex5{
         margin-bottom: 2em;
