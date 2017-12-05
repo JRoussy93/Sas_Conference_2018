@@ -109,7 +109,7 @@
 
 
 				<!--Purple Square-->
-				<div class="shapeholder " id="square1holder">
+				<div class="shapeholder rellax" id="square1holder" data-rellax-percentage="0.5">
 					<div class="shape square purplebg rotate-right" id="square1"></div>
 				</div>
 
@@ -139,7 +139,7 @@
 		<div class="row ">
 
 			<!--Grey Circle-->
-			<div class="shapeholder" id="circle1holder">
+			<div class="shapeholder rellax" id="circle1holder" data-rellax-percentage="0.5">
 				<div class="shape circle greybg" id="circle1"></div>
 			</div>
 
@@ -176,8 +176,8 @@
 
 
 		<!--Red Triangle-->
-		<div class="shapeholder " id="triangle1holder">
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.66 237" class="shape triangle rotate-left" id="triangle2"><title>triangle</title><g data-name="Layer 2"><g data-name="Layer 1"><polygon class="redbg" points="136.83 0 0 237 273.66 237 136.83 0"/></g></g></svg>
+		<div class="shapeholder rellax" id="triangle1holder" data-rellax-percentage="0.5">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.66 237" class="shape triangle rotate-right" id="triangle2"><title>triangle</title><g data-name="Layer 2"><g data-name="Layer 1"><polygon class="redbg" points="136.83 0 0 237 273.66 237 136.83 0"/></g></g></svg>
 		</div>
 
 		<div class="row">
@@ -201,7 +201,7 @@
 
 
 		<!--Purple Triangle-->
-		<div class="shapeholder" id="triangle1holder">
+		<div class="shapeholder rellax" id="triangle1holder" data-rellax-percentage="0.5">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.66 237" class="shape triangle rotate-left" id="triangle1"><title>triangle</title><g data-name="Layer 2"><g data-name="Layer 1"><polygon class="purplebg" points="136.83 0 0 237 273.66 237 136.83 0"/></g></g></svg>
 		</div>
 
@@ -260,7 +260,11 @@
 
 	<!-- Javascript
     ------------------------------------------ -->
-	<script src="js/main.js"></script>
+	<script src="js/rellax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax');
+    </script>
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
     <script>
